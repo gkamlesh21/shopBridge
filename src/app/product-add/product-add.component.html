@@ -29,6 +29,15 @@
                 <div *ngIf="angForm.controls['ProductPrice'].errors.required">
                     Product Price is required.
                 </div>
+
+                <div *ngIf="angForm.controls['ProductPrice'].errors.pattern">
+                    Please enter numbers in Product Price.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 pl-0">Product Image</label>
+                <input type="file" class="form-control" name="image" (change)="selectImage($event)" accept="image/*" />
             </div>
 
             <div class="form-group">

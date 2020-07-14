@@ -45,6 +45,7 @@ productRoutes.route('/update/:id').post(function(req, res) {
             product.ProductName = req.body.ProductName;
             product.ProductDescription = req.body.ProductDescription;
             product.ProductPrice = req.body.ProductPrice;
+            product.ProductImage = req.body.ProductImage;
 
             product.save().then(product => {
                     res.json('Update complete');

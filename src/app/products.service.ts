@@ -10,17 +10,18 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
-  addProduct(ProductName, ProductDescription, ProductPrice) {
+  addProduct(ProductName, ProductDescription, ProductPrice, ProductImage?: any) { //
     const obj = {
       ProductName,
       ProductDescription,
-      ProductPrice
+      ProductPrice,
+      ProductImage
     };
-    console.log(obj);
-    this.http.post(`${this.uri}/add`, obj)
-      .subscribe((res) => {
-        console.log('Done', res)
-      });
+    // console.log(obj);
+    return this.http.post(`${this.uri}/add`, obj)
+    // .subscribe((res) => {
+    //   console.log('Done', res)
+    // });
   }
 
   getProducts() {
@@ -31,16 +32,18 @@ export class ProductsService {
     return this.http.get(`${this.uri}/edit/${id}`);
   }
 
-  updateProduct(ProductName, ProductDescription, ProductPrice, id) {
+  updateProduct(ProductName, ProductDescription, ProductPrice, id, ProductImage?: any) {
     const obj = {
       ProductName,
       ProductDescription,
-      ProductPrice
+      ProductPrice,
+      ProductImage
     };
-    this.http.post(`${this.uri}/update/${id}`, obj)
-      .subscribe((res) => {
-        console.log('Done', res)
-      });
+    // console.log(obj);
+    return this.http.post(`${this.uri}/update/${id}`, obj)
+      // .subscribe((res) => {
+      //   console.log('Done', res)
+      // });
   }
 
   deleteProduct(id) {

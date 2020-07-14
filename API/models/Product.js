@@ -11,7 +11,10 @@ let Product = new Schema({
     },
     ProductPrice: {
         type: Number
-    }
+    },
+    ProductImage: {
+        type: String
+    },
 }, {
     collection: 'Product'
 });
