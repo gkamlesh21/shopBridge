@@ -1,6 +1,11 @@
 .table td,
 .table th {
     vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.table td {
+    cursor: pointer;
 }
 
 .table td img {

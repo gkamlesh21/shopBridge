@@ -1,0 +1,17 @@
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.table th {
+    width: 20%;
+}
+
+.table tr td:last-child {
+    text-align: center;
+}
+
+.table td img {
+    object-fit: cover;
+    width: 100%;
+}

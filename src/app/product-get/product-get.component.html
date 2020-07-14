@@ -10,7 +10,7 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let product of products">
+        <tr *ngFor="let product of products" [routerLink]="['/detail', product._id]">
             <td><img [src]=" 
                 './../../assets/uploads/' + 
                 (product.ProductImage != undefined || product.ProductImage != null ? product.ProductImage : 'notAvailable.jpg')

@@ -65,4 +65,12 @@ productRoutes.route('/delete/:id').get(function(req, res) {
     });
 });
 
+// Defined details route
+productRoutes.route('/detail/:id').get(function(req, res) {
+    let id = req.params.id;
+    Product.findById(id, function(err, product) {
+        res.json(product);
+    });
+});
+
 module.exports = productRoutes;

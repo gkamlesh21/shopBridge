@@ -49,4 +49,8 @@ export class ProductsService {
   deleteProduct(id) {
     return this.http.get(`${this.uri}/delete/${id}`);
   }
+
+  detailProduct(id) {
+    return this.http.get(`${this.uri}/detail/${id}`);
+  }
 }

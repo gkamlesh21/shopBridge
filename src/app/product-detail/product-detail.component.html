@@ -1,0 +1,29 @@
+<table class="table table-hover">
+    <tbody>
+        <tr>
+            <th>Product Name</th>
+            <td>:</td>
+            <td>{{ product.ProductName }}</td>
+        </tr>
+        <tr>
+            <th>Product Description</th>
+            <td>:</td>
+            <td>{{ product.ProductDescription }}</td>
+
+        </tr>
+        <tr>
+            <th>Product Price</th>
+            <td>:</td>
+            <td>{{ product.ProductPrice }}</td>
+        </tr>
+        <tr>
+            <th>Product Image</th>
+            <td>:</td>
+            <td><img [src]=" 
+                './../../assets/uploads/' + 
+                (product.ProductImage != undefined || product.ProductImage != null ? product.ProductImage : 'notAvailable.jpg')
+                " />
+            </td>
+        </tr>
+    </tbody>
+</table>

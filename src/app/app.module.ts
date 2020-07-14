@@ -12,13 +12,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ProductsService } from './products.service';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductAddComponent,
     ProductGetComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
